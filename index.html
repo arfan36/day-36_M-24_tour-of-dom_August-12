@@ -12,6 +12,10 @@
             color: tomato;
         }
 
+        .fruits-container li {
+            color: tomato;
+        }
+
         #fruits-title {
             color: black;
         }
@@ -38,7 +42,7 @@
                 <li>Dom de re baba</li>
             </ul>
         </section>
-        <section>
+        <section class="fruits-container">
             <h1 id="fruits-title">Fruits I like</h1>
             <ul>
                 <li>Apple</li>
@@ -59,6 +63,8 @@
 
     <script src="js/dom.js"></script>
     <script>
+
+        // option-1: getElementsByTagName
         const liCollectiom = document.getElementsByTagName('li');
         // console.log(liCollectiom);
         for (const li of liCollectiom) {
@@ -69,13 +75,25 @@
         for (const h1 of allHeadings) {
             // console.log(h1.innerText);
         }
-
+        
+        // option-2: getElementById
         const fruitsTitle = document.getElementById('fruits-title');
         fruitsTitle.innerText = 'Fruits chanded by JS';
 
+        // option-3: getElemntsByClassName
         const places = document.getElementsByClassName('important-places');
         for (const place of places) {
             console.log(place.innerText);
+        }
+
+        // option-4: querySelector
+        // will return the first one
+        
+        // option-5: querySelectorAll
+        const someLi = document.querySelectorAll('.fruits-container li');
+        // console.log(someLi);
+        for (const li of someLi) {
+            console.log(li.innerText);
         }
     </script>
 </body>
