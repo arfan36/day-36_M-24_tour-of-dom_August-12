@@ -24,12 +24,27 @@
             <li>Jalali Set</li>
             <li>Shafayet</li>
             <li>bonobash</li>
+            <li>Dom de re baba</li>
+        </ul>
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Carrot</li>
         </ul>
     </main>
 
     <script src="js/dom.js"></script>
     <script>
-        console.log('adding JS inside the html file');
+        const liCollectiom = document.getElementsByTagName('li');
+        // console.log(liCollectiom);
+        for (const li of liCollectiom) {
+            console.log(li.innerText);
+        }
+
+        const allHeadings = document.getElementsByTagName('h1');
+        for (const h1 of allHeadings) {
+            console.log(h1.innerText);
+        }
     </script>
 </body>
 
