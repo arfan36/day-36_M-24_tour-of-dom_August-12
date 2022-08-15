@@ -51,7 +51,7 @@
                 <li>Carrot</li>
             </ul>
         </section>
-        <section>
+        <section id="places-container" class="large-text">
             <h1 id="places-title">Places I like to visit</h1>
             <ul>
                 <li class="important-places">Soondarban</li>
@@ -63,6 +63,7 @@
     </main>
 
     <script src="js/dom.js"></script>
+    <script src="js/styleIn.js"></script>
     <script>
 
         // option-1: getElementsByTagName
@@ -76,7 +77,7 @@
         for (const h1 of allHeadings) {
             // console.log(h1.innerText);
         }
-        
+
         // option-2: getElementById
         const fruitsTitle = document.getElementById('fruits-title');
         fruitsTitle.innerText = 'Fruits chanded by JS';
@@ -84,17 +85,17 @@
         // option-3: getElemntsByClassName
         const places = document.getElementsByClassName('important-places');
         for (const place of places) {
-            console.log(place.innerText);
+            // console.log(place.innerText);
         }
 
         // option-4: querySelector
         // will return the first one
-        
+
         // option-5: querySelectorAll
         const someLi = document.querySelectorAll('.fruits-container li');
         // console.log(someLi);
         for (const li of someLi) {
-            console.log(li.innerText);
+            // console.log(li.innerText);
         }
     </script>
 </body>
